@@ -25,7 +25,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.chundao.crow.core.entity.User;
 import com.chundao.crow.core.service.UserService;
-import com.chundao.crow.core.service.impl.UserServiceImpl;
 
 
 /**
