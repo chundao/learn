@@ -15,12 +15,17 @@
  */
 package com.chundao.crow.core.entity;
 
+import java.io.Serializable;
+
 
 /**
  * @author zhen.wz
  * 2013-5-25ионГ11:32:55
  */
-public class Product {
+public class Product implements Serializable {
+    
+    /**   **/
+    private static final long serialVersionUID = 1660478225280761986L;
     
     private int id;
     private String name;

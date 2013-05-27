@@ -55,6 +55,18 @@
 		   </props>   
 		</property> 
 	</bean>
+	
+	<!-- 
+	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<value>
+				/product.hessian.service=hessianProductService
+				/product.burlap.service=burlapProductService
+				/product.httpinvoker.service=httpInvokerProductService
+			</value>
+		</property>
+	</bean>
+	 -->
     
    
 </beans>

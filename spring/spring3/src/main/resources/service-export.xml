@@ -8,12 +8,38 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
+	<!-- rmi provider 
 	<bean class="org.springframework.remoting.rmi.RmiServiceExporter"
-			p:sevice-ref="productService"
+			p:service-ref="productService"
 			p:serviceName="ProductService"
 			p:serviceInterface="com.chundao.crow.core.service.ProductService"
 	 />
+	 -->
 	 
-	 
+   <!-- hessian provider 
+   <bean id="hessianProductService" class="org.springframework.remoting.caucho.HessianServiceExporter"
+   		 p:service-ref="productService"
+   		 p:serviceInterface="com.chundao.crow.core.service.ProductService"
+   />
+   -->
+   
+   <!-- burlap provider 
+   <bean id="burlapProductService" class="org.springframework.remoting.caucho.BurlapServiceExporter"
+   		 p:service-ref="productService"
+   		 p:serviceInterface="com.chundao.crow.core.service.ProductService"
+   />
+   -->
+   
+   <!-- spring http invoker provider 
+   <bean id="httpInvokerProductService" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter"
+   		 p:service-ref="productService"
+   		 p:serviceInterface="com.chundao.crow.core.service.ProductService"
+   />
+   -->
+   
+   <bean class="org.springframework.remoting.jaxws.SimpleJaxWsServiceExporter"
+   		 p:baseAddress="http://localhost:8888/webservices/"
+   />
+   
    
 </beans>
