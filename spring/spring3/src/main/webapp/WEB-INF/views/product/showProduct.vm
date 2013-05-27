@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Product Detail</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+</head>
+
+<body>
+
+	#if( $!product )
+		<div>
+			name: ${product.name}<br/>
+			description: ${product.description}<br/>
+			price: ${product.price}<br/>
+			stock: ${product.stock}<br/>
+        </div>
+	#else
+		sorry, the product is not found...
+	#end
+
+</body>
+
+</html>
+
