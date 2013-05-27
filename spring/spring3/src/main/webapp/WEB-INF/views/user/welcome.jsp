@@ -1,0 +1,2 @@
+
+welcome, ${rrquestScope.user.username} !

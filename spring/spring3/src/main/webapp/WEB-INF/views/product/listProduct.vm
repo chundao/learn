@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Product List</title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+</head>
+
+<body>
+
+	<div>Product List</div>
+
+	<div>
+		<table border="2" >
+			<tr>
+				<td>name</td>
+				<td>desc</td>
+				<td>price</td>
+				<td>stock</td>
+				<td>link</td>
+			</tr>
+			#foreach( $product in $productList )
+			<tr>
+				<td>${product.name}</td>
+				<td>${product.description}</td> 
+				<td>${product.price}</td>
+				<td>${product.stock}</td>
+                <td><a href="http://localhost/hello/product.htm?id=$!{product.id}">view</a></td>
+			</tr>
+			#end
+		</table>
+	</div>
+
+</body>
+
+</html>
+
