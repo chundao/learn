@@ -24,11 +24,20 @@ import java.util.Map;
 
 import javax.jws.WebService;
 
-@WebService(endpointInterface = "demo.hw.server.HelloWorld",
+@WebService(endpointInterface = "com.chundao.learn.simplecxf.jaxws.server.HelloWorld",
             serviceName = "HelloWorld")
 public class HelloWorldImpl implements HelloWorld {
     Map<Integer, User> users = new LinkedHashMap<Integer, User>();
 
+    {
+        User u1 = new UserImpl("hello");
+        User u2 = new UserImpl("world");
+        User u3 = new UserImpl("hehe");
+        
+        users.put(1, u1);
+        users.put(2, u2);
+        users.put(3, u3);
+    }
 
     public String sayHi(String text) {
         System.out.println("sayHi called");

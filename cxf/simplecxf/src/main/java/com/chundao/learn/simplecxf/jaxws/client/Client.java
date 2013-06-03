@@ -25,6 +25,8 @@ import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 import javax.xml.ws.soap.SOAPBinding;
 
+import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
+
 import com.chundao.learn.simplecxf.jaxws.server.HelloWorld;
 import com.chundao.learn.simplecxf.jaxws.server.User;
 import com.chundao.learn.simplecxf.jaxws.server.UserImpl;
@@ -40,7 +42,7 @@ public final class Client {
     private Client() {
     } 
 
-    public static void main(String args[]) throws Exception {
+    private static void test1(){
         Service service = Service.create(SERVICE_NAME);
         // Endpoint Address
         String endpointAddress = "http://localhost:9000/helloWorld";
@@ -70,7 +72,39 @@ public final class Client {
         for (Map.Entry<Integer, User> e : users.entrySet()) {
             System.out.println("  " + e.getKey() + ": " + e.getValue().getName());
         }
+    }
+    
+    private static void cxfClient(){
+        JaxWsProxyFactoryBean factory = new JaxWsProxyFactoryBean();
+        factory.setServiceClass(HelloWorld.class);
+        factory.setAddress("http://localhost:9002/helloWorld");
+        HelloWorld client = (HelloWorld)factory.create();
+        
+        String reply = client.sayHi("HI");
+        System.out.println( "recv from server: " + reply );
+        
+        User user = new UserImpl("World");
+        System.out.println(client.sayHiToUser(user));
 
+        //say hi to some more users to fill up the map a bit
+        user = new UserImpl("Galaxy");
+        System.out.println(client.sayHiToUser(user));
+
+        user = new UserImpl("Universe");
+        System.out.println(client.sayHiToUser(user));
+
+        System.out.println();
+        System.out.println("Users: ");
+        Map<Integer, User> users = client.getUsers();
+        for (Map.Entry<Integer, User> e : users.entrySet()) {
+            System.out.println("  " + e.getKey() + ": " + e.getValue().getName());
+        }
+        
+        System.exit(0);
+    }
+    
+    public static void main(String args[]) throws Exception {
+        cxfClient();
     }
 
 }

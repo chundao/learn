@@ -21,6 +21,8 @@ package com.chundao.learn.simplecxf.jaxws.server;
 
 import javax.xml.ws.Endpoint;
 
+import org.apache.cxf.jaxws.JaxWsServerFactoryBean;
+
 public class Server {
 
     protected Server() throws Exception {
@@ -31,13 +33,26 @@ public class Server {
         Endpoint.publish(address, implementor);
         // END SNIPPET: publish
     }
-
+    
     public static void main(String args[]) throws Exception {
-        new Server();
+//        new Server();
+        setUpCxfServer();
+
         System.out.println("Server ready...");
 
         Thread.sleep(5 * 60 * 1000);
         System.out.println("Server exiting");
+        System.in.read();
         System.exit(0);
+    }
+    
+    private static void  setUpCxfServer(){
+        HelloWorldImpl impl = new HelloWorldImpl();
+        JaxWsServerFactoryBean server = new JaxWsServerFactoryBean();
+        server.setServiceClass(HelloWorld.class);
+        server.setAddress("http://localhost:9002/helloWorld");
+        server.setServiceBean(impl);
+        server.create();
+        
     }
 }
