@@ -8,37 +8,41 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-	<!-- rmi consumer -->
+	<!-- rmi consumer 
 	<bean id="productService" class="org.springframework.remoting.rmi.RmiProxyFactoryBean"
 			p:serviceUrl="rmi://localhost:1099/ProductService"
 			p:serviceInterface="com.chundao.crow.core.service.ProductService"
 	 />
+	 -->
 	
-	<!-- hessian consumer --> 
+	<!-- hessian consumer  
 	 <bean id="hessionProductService" 
 	 		class="org.springframework.remoting.caucho.HessianProxyFactoryBean"
 	 		p:serviceUrl="http://localhost/spring3/product.hessian.service"
 	 		p:serviceInterface="com.chundao.crow.core.service.ProductService" 
 	 />
+	 -->
 	
-	<!-- burlap consumer --> 
+	<!-- burlap consumer 
 	 <bean id="burlapProductService" 
 	 		class="org.springframework.remoting.caucho.BurlapProxyFactoryBean"
 	 		p:serviceUrl="http://localhost/spring3/product.burlap.service"
 	 		p:serviceInterface="com.chundao.crow.core.service.ProductService" 
 	 />
+	 --> 
 	 
-	 <!-- http invoker consumer --> 
+	 <!-- http invoker consumer 
 	 <bean id="httpInvokerProductService" 
 	 		class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean"
 	 		p:serviceUrl="http://localhost/spring3/product.httpinvoker.service"
 	 		p:serviceInterface="com.chundao.crow.core.service.ProductService" 
 	 />
+	 --> 
 	 
 	 <!-- web services  -->
 	 <bean id="webServicesProductService"
 	 		class="org.springframework.remoting.jaxws.JaxWsPortProxyFactoryBean"
-	 		p:wsdlDocumentUrl="http://localhost:8888/webservices/WebServiceProductService?wsdl"
+	 		p:wsdlDocumentUrl="http://localhost:8080/WebServiceProductService?wsdl"
 	 		p:serviceName="WebServiceProductService"
 	 		p:portName="webServiceProductServicePort"
 	 		p:serviceInterface="com.chundao.crow.core.service.ProductService"

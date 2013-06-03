@@ -17,6 +17,9 @@ package com.chundao.crow.core.service;
 
 import java.util.List;
 
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+
 import com.chundao.crow.core.entity.Product;
 
 
@@ -24,10 +27,15 @@ import com.chundao.crow.core.entity.Product;
  * @author zhen.wz
  * 2013-5-25ионГ11:41:41
  */
+@WebService( serviceName = "WebServiceProductService",
+            portName = "webServiceProductServicePort",
+            targetNamespace = "http://product.com" ) 
 public interface ProductService {
 
+    @WebMethod
     public List<Product> getAllProducts();
     
+    @WebMethod
     public Product getProductById( Integer id );
     
 }

@@ -34,6 +34,13 @@ public class Product implements Serializable {
     private int stock;
     
     
+    
+    /**
+     * 
+     */
+    public Product() {
+    }
+    
     /**
      * @param id
      * @param name
