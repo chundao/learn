@@ -15,12 +15,24 @@
  */
 package com.chundao.crow.core.entity;
 
+<<<<<<< HEAD
+=======
+import java.io.Serializable;
+
+>>>>>>> 20cf962c428e23dd472e0659c60e5da1c9e50a4a
 
 /**
  * @author zhen.wz
  * 2013-5-25ионГ11:32:55
  */
+<<<<<<< HEAD
 public class Product {
+=======
+public class Product implements Serializable {
+    
+    /**   **/
+    private static final long serialVersionUID = 1660478225280761986L;
+>>>>>>> 20cf962c428e23dd472e0659c60e5da1c9e50a4a
     
     private int id;
     private String name;
@@ -29,6 +41,16 @@ public class Product {
     private int stock;
     
     
+<<<<<<< HEAD
+=======
+    
+    /**
+     * 
+     */
+    public Product() {
+    }
+    
+>>>>>>> 20cf962c428e23dd472e0659c60e5da1c9e50a4a
     /**
      * @param id
      * @param name

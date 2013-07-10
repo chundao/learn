@@ -15,12 +15,16 @@
  */
 package com.chundao.crow.mvc;
 
+<<<<<<< HEAD
 import java.io.File;
 import java.io.IOException;
+=======
+>>>>>>> 20cf962c428e23dd472e0659c60e5da1c9e50a4a
 import java.util.List;
 
 import javax.annotation.Resource;
 
+<<<<<<< HEAD
 import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,6 +37,15 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.chundao.crow.core.entity.Product;
 import com.chundao.crow.core.entity.User;
+=======
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.chundao.crow.core.entity.Product;
+>>>>>>> 20cf962c428e23dd472e0659c60e5da1c9e50a4a
 import com.chundao.crow.core.service.ProductService;
 
 
@@ -63,6 +76,7 @@ public class ProductController {
         return "product/showProduct";
     }
     
+<<<<<<< HEAD
     @RequestMapping( value = "uploadFile.htm", method = RequestMethod.GET )
     public String uploadFile( //@RequestParam( value = "msg", required = false ) String msg,
                               Model model ){
@@ -108,4 +122,6 @@ public class ProductController {
         }
     }
     
+=======
+>>>>>>> 20cf962c428e23dd472e0659c60e5da1c9e50a4a
 }

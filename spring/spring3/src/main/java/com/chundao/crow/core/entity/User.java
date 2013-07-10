@@ -15,9 +15,12 @@
  */
 package com.chundao.crow.core.entity;
 
+<<<<<<< HEAD
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+=======
+>>>>>>> 20cf962c428e23dd472e0659c60e5da1c9e50a4a
 
 /**
  * @author zhen.wz
@@ -25,12 +28,17 @@ import javax.validation.constraints.Size;
  */
 public class User {
     
+<<<<<<< HEAD
 //    @Size( min = 3, max = 10, message = "username must be between 3 an 10." )
 //    @Pattern( regexp = "^[a-zA-Z0-9]+$", message = "username cannot involve spaces." )
     private String username;
 //    @Size( min = 5, max = 10, message = "username must be between 5 an 10." )
     private String password;
 //    @Size( min = 3, max = 10, message = "username must be between 3 an 10." )
+=======
+    private String username;
+    private String password;
+>>>>>>> 20cf962c428e23dd472e0659c60e5da1c9e50a4a
     private String email;
 
     
