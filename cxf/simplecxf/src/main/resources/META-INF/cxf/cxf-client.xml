@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://cxf.apache.org/jaxws 
+		http://cxf.apache.org/schemas/jaxws.xsd">
+
+
+	<!-- cxf client config 1 -->
+<!-- 	<jaxws:client id="helloClient" -->
+<!-- 					serviceClass="com.chundao.learn.simplecxf.getstart.HelloWorld" -->
+<!-- 					address="http://localhost:9002/services/helloworld" /> -->
+					
+	<!-- cxf client config 2 -->				
+	<bean id="helloClient" class="com.chundao.learn.simplecxf.getstart.HelloWorld"
+			factory-bean="clientFactory" factory-method="create"/>
+	<bean id="clientFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
+		<property name="serviceClass" value="com.chundao.learn.simplecxf.getstart.HelloWorld" />
+		<property name="address" value="http://localhost:9002/services/helloworld"/>
+	</bean>		
+
+</beans>

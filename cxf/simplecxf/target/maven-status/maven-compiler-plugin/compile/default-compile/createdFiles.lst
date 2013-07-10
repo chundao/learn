@@ -1,0 +1,17 @@
+com\chundao\learn\simplecxf\getstart\Test.class
+com\chundao\learn\simplecxf\jaxws\server\UserImpl.class
+com\chundao\learn\simplecxf\getstart\HelloWorld.class
+com\chundao\learn\simplecxf\jaxws\customerservice\CustomerService.class
+com\chundao\learn\simplecxf\jaxws\server\IntegerUserMap$IntegerUserEntry.class
+com\chundao\learn\simplecxf\jaxws\server\HelloWorldImpl.class
+com\chundao\learn\simplecxf\jaxws\customerservice\NoSuchCustomerException.class
+com\chundao\learn\simplecxf\getstart\HelloWorldImpl.class
+com\chundao\learn\simplecxf\jaxws\server\IntegerUserMapAdapter.class
+com\chundao\learn\simplecxf\jaxws\client\Client.class
+com\chundao\learn\simplecxf\jaxws\server\Server.class
+com\chundao\learn\simplecxf\jaxws\customerservice\Customer.class
+com\chundao\learn\simplecxf\jaxws\server\HelloWorld.class
+com\chundao\learn\simplecxf\jaxws\server\IntegerUserMap.class
+com\chundao\learn\simplecxf\jaxws\server\User.class
+com\chundao\learn\simplecxf\jaxws\customerservice\CustomerType.class
+com\chundao\learn\simplecxf\jaxws\server\UserAdapter.class
